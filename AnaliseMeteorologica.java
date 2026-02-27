@@ -29,7 +29,7 @@ public class AnaliseMeteorologica {
         gerarRelatorioDetalhado();
     }
 
-    // 1️⃣ Média ponderada (70% max, 30% min)
+    // 1 Média ponderada (70% max, 30% min)
     public static double calcularMediaPonderadaTemperatura(double max, double min) {
 
         if (max < -50 || max > 60 || min < -50 || min > 60) {
@@ -39,7 +39,7 @@ public class AnaliseMeteorologica {
         return (max * 0.7) + (min * 0.3);
     }
 
-    // 2️⃣ Classificação do clima
+    // 2 Classificação do clima
     public static String classificarClima(double tempMedia, int umidadeMedia) {
 
         if (tempMedia > 30 && umidadeMedia > 75)
@@ -54,7 +54,7 @@ public class AnaliseMeteorologica {
             return "QUENTE LEVE";
     }
 
-    // 3️⃣ Cidade com maior amplitude térmica
+    // 3 Cidade com maior amplitude térmica
     public static int identificarCidadeComMaiorAmplitudeTermica() {
 
         double maiorAmplitude = 0;
@@ -72,7 +72,7 @@ public class AnaliseMeteorologica {
         return indice;
     }
 
-    // 4️⃣ Índice de calor
+    // 4 Índice de calor
     public static double calcularIndiceCalor(double temp, int umidade) {
 
         double indice = temp + 0.5 * (umidade / 100.0) * (temp - 20);
@@ -80,7 +80,7 @@ public class AnaliseMeteorologica {
         return Math.round(indice * 10.0) / 10.0;
     }
 
-    // 5️⃣ Sistema de alertas
+    // 5 Sistema de alertas
     public static int gerarAlertas(int cidadeIndex) {
 
         double max = temperaturas[cidadeIndex][0];
@@ -101,7 +101,7 @@ public class AnaliseMeteorologica {
             return 0; // verde
     }
 
-    // 6️⃣ Estatísticas gerais
+    // 6 Estatísticas gerais
     public static double[] calcularEstatisticasAvancadas() {
 
         double soma = 0;
@@ -133,7 +133,7 @@ public class AnaliseMeteorologica {
         return new double[]{media, maior, menor, desvio};
     }
 
-    // 7️⃣ Comparação entre cidades
+    // 7 Comparação entre cidades
     public static String compararCidades(int c1, int c2, int c3, int c4) {
 
         double media1 = calcularMediaPonderadaTemperatura(
@@ -161,7 +161,7 @@ public class AnaliseMeteorologica {
         return "Temperaturas equivalentes.";
     }
 
-    // 8️⃣ Relatório principal
+    // 8 Relatório principal
     public static void gerarRelatorioDetalhado() {
 
         System.out.println("======================================================");
