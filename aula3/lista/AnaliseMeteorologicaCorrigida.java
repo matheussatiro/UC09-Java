@@ -15,7 +15,7 @@ public class AnaliseMeteorologica { //Aqui é criada a classe principal chamada
     }
 
         // 2️ Classificação do clima
-    public static String classificarClima(double tempMedia, int umidadeMedia) {
+    public static String classificarClima(double tempMedia, double umidadeMedia) {
 
         if (tempMedia >= 30 && umidadeMedia >= 75)
             return "MUITO QUENTE";
@@ -206,4 +206,5 @@ public class AnaliseMeteorologica { //Aqui é criada a classe principal chamada
 
    
 }
+
 
