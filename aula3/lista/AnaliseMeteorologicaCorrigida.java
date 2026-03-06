@@ -7,7 +7,7 @@ public class AnaliseMeteorologica { //Aqui é criada a classe principal chamada
     public static double calcularMediaPonderadaTemperatura(double max, double min) {
 
         if (max < -50 || max > 60 || min < -50 || min > 60) { // Valida se as temperaturas estão num intervalo realista (-50°C a 60°C)
-            throw new IllegalArgumentException("Temperatura fora do intervalo permitido.");// "throw" lança uma exceção — interrompe o programa com uma mensagem de erro. É usado no Java 
+            System.out.print("A Temperatura dessa cidade está fora do intervalo permitido.");
         }
 //É o nome de uma classe de exceção que já existe na biblioteca padrão do Java. O nome é bem descritivo: ela foi feita para ser usada quando um método recebe um argumento (um parâmetro) que é inválido ou inadequado.
         return (max * 0.7) + (min * 0.3); 
@@ -206,3 +206,4 @@ public class AnaliseMeteorologica { //Aqui é criada a classe principal chamada
 
    
 }
+
